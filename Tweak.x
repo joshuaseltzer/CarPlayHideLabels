@@ -13,11 +13,11 @@
 
 %group iOS13
 
-%hook CRSApplicationIcon
+%hook CARIconView
 
-+ (NSString *)localizedDisplayName
++ (double)_labelHeight
 {
-    return @"";
+    return 0.0;
 }
 
 %end
