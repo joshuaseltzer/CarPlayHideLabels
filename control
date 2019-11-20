@@ -1,0 +1,9 @@
+Package: com.joshuaseltzer.carplayhidelabels
+Name: CarPlayHideLabels
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Tweak to hide the icon labels from within CarPlay.  Supports iOS 7 to iOS 13.
+Maintainer: Joshua Seltzer
+Author: Joshua Seltzer
+Section: Tweaks
