@@ -15,9 +15,9 @@
 
 %hook CARIconView
 
-+ (double)_labelHeight
++ (CGSize)maxLabelSizeForIconImageSize:(CGSize)imageSize
 {
-    return 0.0;
+    return CGSizeZero;
 }
 
 %end
