@@ -6,14 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <version.h>
 
-/*#ifndef kCFCoreFoundationVersionNumber_iOS_13_0
-#define kCFCoreFoundationVersionNumber_iOS_13_0 1665.15
-#endif
-
-#define kSLSystemVersioniOS13 kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_13_0*/
-
-//%group iOS13
+%group modern
 
 %hook CARIconView
 
@@ -24,10 +19,9 @@
 
 %end
 
-//%end // %group iOS13
+%end // %group modern
 
-/*
-%group iOS7iOS8iOS9iOS10iOS11iOS12
+%group legacy
 
 %hook SBStarkIconView
 
@@ -38,16 +32,13 @@
 
 %end
 
-%end // %group iOS7iOS8iOS9iOS10iOS11iOS12
-*/
+%end // %group legacy
 
-/*
+
 %ctor {
-    // check which version we are running to determine which group to initialize
-    if (kSLSystemVersioniOS13)  {
-        %init(iOS13);
+    if (IS_IOS_OR_NEWER(iOS_13_0)) {
+        %init(modern);
     } else {
-        %init(iOS7iOS8iOS9iOS10iOS11iOS12);
+        %init(legacy);
     }
 }
-*/
