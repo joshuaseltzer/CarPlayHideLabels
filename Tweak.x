@@ -1,5 +1,5 @@
 //
-//  Tweak.m
+//  Tweak.x
 //
 //  Created by Joshua Seltzer on 11/19/19.
 //
@@ -33,7 +33,6 @@
 %end
 
 %end // %group legacy
-
 
 %ctor {
     if (IS_IOS_OR_NEWER(iOS_13_0)) {
